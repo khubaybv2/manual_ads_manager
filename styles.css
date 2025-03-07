@@ -1,38 +1,37 @@
-/* Ad Container */
-#ad-container {
+/* Pop-up Ad Styling */
+#custom-ad-widget {
     position: fixed;
-    bottom: 15px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90%;
-    max-width: 800px;
-    background: rgba(255, 255, 255, 0.98);
+    bottom: 20px;
+    right: 20px;
+    width: 350px;
+    background: #ffffff;
     border-radius: 12px;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
-    padding: 12px;
-    text-align: center;
-    font-family: 'Sutonnim', Arial, sans-serif;
-    z-index: 1000;
-    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    z-index: 9999;
+    display: none;
 }
 
-/* Close Button */
-#close-ad {
+#custom-ad-widget.active {
+    display: block;
+    animation: slideIn 0.5s ease-out;
+}
+
+.ad-content {
+    padding: 20px;
+}
+
+#close-ad-btn {
     position: absolute;
-    top: -10px;
-    right: -10px;
-    background: #d32f2f;
-    color: white;
+    top: 5px;
+    right: 10px;
+    background: none;
     border: none;
-    font-size: 16px;
-    padding: 6px 10px;
+    font-size: 24px;
     cursor: pointer;
-    border-radius: 50%;
 }
 
-/* Footer */
-footer {
-    text-align: center;
-    font-size: 14px;
-    margin-top: 20px;
+/* Animation */
+@keyframes slideIn {
+    from { transform: translateY(100%); }
+    to { transform: translateY(0); }
 }
